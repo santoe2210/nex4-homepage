@@ -10,7 +10,7 @@ body, html {
   min-height: 100vh;
   background-image: url('/assets/backgrounds/long-bg.png');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top center;
   background-size: cover;
   color: white;
   margin: 0;

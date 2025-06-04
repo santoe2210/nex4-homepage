@@ -1,0 +1,59 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header-logo {
+  height: 30px;
+}
+
+.hamburger {
+  background: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 20px;
+  height: 2px;
+  background: #007bff;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -220px;
+  width: 200px;
+  height: 100vh;
+  background: rgba(0, 40, 80, 0.95);
+  transition: right 0.3s ease-in-out;
+  padding-top: 80px;
+  z-index: 1001;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  color: white;
+}
+
+.sidebar li {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}

@@ -1,74 +1,100 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from 'react';
 import "./css/Hero.css";
+
+import ClientLogos from './ClientLogos';
 
 const Hero = () => {
   return (
-     <div className="nexa-container">
+    <div className="nex4-container">
       {/* Header */}
-      <header className="nexa-header">
-        <h1>NEX4</h1>
-        <p>
-          AIの道具、データ、システムを一緒に。<br />
-          最先端の技術で計画、開発、運用を支援します
-        </p>
-      </header>
+      <div className="bg-tint">
+        <header className="nex4-header">
+          <p className="header-bg">
+            <img
+              src="/assets/logo/lgr1.png" // Replace with the path to your actual logo
+              alt="NEX4 Logo"
+              className="mr-3 white-logo"
+            />
+            <p className="header-text">
+              <b>
+                は、AWS から “アドバンスドサービスパートナー” の認定を受け、
+                AWSの構築・運用・技術コンサルティングまで行う
+                プロフェッショナルの技術者集団です。</b>
+            </p>
+          </p>
+        </header>
 
-      {/* Problem Statement */}
-      <section className="nexa-section text-center">
-        <h2>こんな言葉を聞いたことはありませんか?</h2>
-        <ul>
-          <li>AIを使いたいけど、何から始めたら良いか分からない</li>
-          <li>AI開発にお金がかかりそうで心配</li>
-          <li>社内にデータが散乱している</li>
-          <li>データを元に機械学習モデルを作りたい</li>
-        </ul>
-      </section>
+        {/* Problem Statement */}
+        <section class="concern-section">
+          <div class="concern-box">
+            <h2 class="concern-title">こんなお悩みございませんか？</h2>
+            <ul class="concern-list">
+              <li>□ システムが老朽化している</li>
+              <li>□ システムが原因で業務が非効率になっている</li>
+              <li>□ ビジネスチャンスにタイムリーに対応できる環境が整っていない</li>
+              <li>□ システム保守やセキュリティアップデートのための人員が足りない</li>
+              <li>□ サイバー攻撃によりダウンしたシステムを数時間以内に復旧できない</li>
+              <li>□ セキュリティ体制を定期的に監視確認できていない</li>
+              <li>□ 使用量／頻度に応じたサーバ台数やコストになっていない</li>
+            </ul>
+          </div>
+          <p class="solution-text">NEX4が解決させて頂きます。</p>
+        </section>
 
-      {/* Solution Introduction */}
-      <section className="nexa-solution">
-        <h2>NEX4が言葉にしづらいニーズを解決します</h2>
-      </section>
+        {/* Solution Introduction */}
+        <section class="strength-section">
+          <div class="strength-box">
+            <h2 class="section-title">NEX4の強み</h2>
+            <b>
+              <p>
+                最新のクラウドが提供するモダンな開発環境、<br />
+                データプラットフォームやAI機能を使いこなせる。
+              </p><br />
+              <p>
+                従来の企業と異なり、CI/CD環境を作り、<br />
+                アジャイルモデル開発でのアプローチを採用。
+              </p><br />
+              <p>
+                IT環境全体の運用と継続的な改善を長期的にサポートできる。
+              </p><br />
+              <p>
+                良質なサービスをリーズナブルに提供できる。
+              </p>
+            </b>
+          </div>
+        </section>
 
-      {/* Services */}
-      <section className="nexa-section">
-        <h3>最適な開発スタイルを定義</h3>
-        <p>
-          ビジネスの目的や現場の状況を分析して、最適な開発スタイルを定義。AIサービスのプロトタイプを提案します
-        </p>
-      </section>
-
-      {/* Logos / Partners */}
-      <section className="nexa-logos">
-        {['Hitachi', 'NTT', 'NEC', 'Fujitsu', 'Canon'].map((brand) => (
-          <img key={brand} src={`/logos/${brand}.png`} alt={brand} />
-        ))}
-      </section>
-
-      {/* Product Features */}
-      <section className="nexa-section">
-        <h3>NEX4の主要機能</h3>
-        <ul>
-          <li>データの一元管理</li>
-          <li>AIモデル開発環境</li>
-          <li>ETLの自動化</li>
-        </ul>
-      </section>
-
-      {/* CTA */}
-      <section className="nexa-cta">
-        <h2>詳しくはこちら</h2>
-        <button>お問い合わせ</button>
-      </section>
-
-      {/* Footer */}
-      <footer className="nexa-footer">
-        <p>株式会社 NEX4 ｜ ビジョンを越える、その先へ</p>
+        {/* Logos / Partners */}
         <div>
-          <a href="#">会社情報</a>
-          <a href="#">採用情報</a>
-          <a href="#">SNS</a>
+          <ClientLogos />
         </div>
-      </footer>
+
+        {/* Product Features */}
+        <section className="nex4-section">
+          <h3>NEX4の主要機能</h3>
+          <ul>
+            <li>データの一元管理</li>
+            <li>AIモデル開発環境</li>
+            <li>ETLの自動化</li>
+          </ul>
+        </section>
+
+        {/* CTA */}
+        <section className="nex4-cta">
+          <h2>詳しくはこちら</h2>
+          <button>お問い合わせ</button>
+        </section>
+
+        {/* Footer */}
+        <footer className="nex4-footer">
+          <p>株式会社 NEX4 ｜ ビジョンを越える、その先へ</p>
+          <div>
+            <a href="#">会社情報</a>
+            <a href="#">採用情報</a>
+            <a href="#">SNS</a>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 };

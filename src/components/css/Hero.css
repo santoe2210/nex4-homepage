@@ -1,11 +1,11 @@
-/* NexaLandingPage.css */
+/* nex4LandingPage.css */
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
 
-.nexa-container {
+.nex4-container {
   width: 100vw;
   min-height: 100vh;
   background-image: url('/assets/backgrounds/long-bg.png');
@@ -18,107 +18,108 @@ body, html {
   overflow-x: hidden;
 }
 
-.nexa-header {
-  text-align: center;
-  padding: 80px 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+.bg-tint{
+  background-color: rgba(0, 16, 69, 0.489);
 }
 
-.nexa-header h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+.white-logo {
+  filter: brightness(0) invert(1);
 }
 
-.nexa-header p {
+.header-bg {
   font-size: 1.25rem;
   line-height: 1.6;
+  
+  padding: 30px;
+  background-color: rgba(23, 105, 199, 0.4);
 }
 
-.nexa-section {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+.concern-section {
+  padding: 80px 20px;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
 }
 
-.nexa-section h2,
-.nexa-section h3 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.concern-box {
+  background-color: rgba(23, 105, 199, 0.4);
+  padding: 30px;
+  max-width: 700px;
+  margin-left: auto; /* aligns box to the right */
+  border-radius: 8px;
+  transform: translateX(100px); /* slide in effect */
+  animation: slideIn 1s ease-out forwards;
 }
 
-.nexa-section ul {
-  list-style-type: disc;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 600px;
-  text-align: left;
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
 
-.nexa-section li {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-.nexa-solution {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: rgba(30, 30, 100, 0.7);
+.concern-title {
   font-size: 1.8rem;
   font-weight: bold;
-}
-
-.nexa-logos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 40px 20px;
-  background-color: white;
-}
-
-.nexa-logos img {
-  height: 40px;
-}
-
-.nexa-cta {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.nexa-cta h2 {
-  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.nexa-cta button {
-  background-color: white;
-  color: #003366;
-  padding: 10px 20px;
+.concern-list {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
   font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
-.nexa-footer {
-  padding: 40px 20px;
+.solution-text{
+  font-weight: bold;
+  font-size: 1.2rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: 30px;
+  background-color: rgba(19, 44, 91, 0.614);
+  max-width: 320px;
+  padding: 20px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
-.nexa-footer p {
-  margin-bottom: 10px;
+
+.strength-box {
+  background-color: rgba(23, 105, 199, 0.4);
+  margin: 0 auto;
+  padding: 60px 30px 40px;
+  position: relative;
+  text-align: center;
+  font-size: 1rem;
+  border: 2px solid rgba(83, 255, 252, 0.8);
 }
 
-.nexa-footer div {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  font-size: 0.9rem;
+.section-title {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(23, 105, 199, 0.959); /* match box or stronger */
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.nexa-footer a {
-  color: #ffffff;
-  text-decoration: none;
+
+@media (min-width: 1024px) {
+  .nex4-header {
+    max-width: 900px;
+    text-align: left;
+  padding: 80px 80px;
+}
+}
+
+@media (max-width: 1024px) {
 }
